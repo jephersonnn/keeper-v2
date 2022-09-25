@@ -29,11 +29,12 @@ function App() {
       <Header />
       <CreateArea onAdd={newItem} /> 
       {/* passing a function as a prop to CreateArea.jsx */}
+       {/* passing key, id, title, content, and a function deleteItem as props for Note.jsx */}
       {items.map((noteItem, index) => {
         return (
           <Note key={index} id={index} title={noteItem.title} content={noteItem.content} onDelete={deleteItem}/>
         )
-        {/* passing key, id, title, content, and a function deleteItem as props for Note.jsx */}
+       
       })}
       <Footer />
     </div>
